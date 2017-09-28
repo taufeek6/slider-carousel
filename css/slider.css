@@ -1,0 +1,100 @@
+body { padding-top: 50px; }
+
+#myCarousel .carousel-caption {
+    
+  right:0;
+  bottom:0;
+  text-align:right;
+  padding:10px;
+  background:transparent;
+  text-shadow:none;
+}
+
+#myCarousel .list-group {
+  position:absolute;
+  top:0;
+  right:0;
+  display: flex;
+  flex-direction: column;
+
+}
+#myCarousel .list-group-item {
+  border-radius:0px;
+  cursor:pointer;
+  color:#ddd;
+}
+#myCarousel .list-group-item:last-child{
+  order: -1;
+}
+#myCarousel .list-group .list-group-item.active {
+  background-color:transparent;
+  color: #000;
+  border-color:#ddd;  
+}
+
+@media (min-width: 992px) { 
+  #myCarousel .carousel-controls {display:none;}  
+}
+@media (max-width: 991px) { 
+  .carousel-caption p,
+  #myCarousel .list-group {display:none;} 
+} 
+.vertical{
+  height:600px;
+  width: 100%;
+}
+.vertical .carousel-inner {
+  height: 100%;
+}
+.vertical .carousel-inner .item{
+  height: 100%;
+}
+
+.carousel.vertical .item {
+  -webkit-transition: 0.2s ease-in-out top;
+     -moz-transition: 0.2s ease-in-out top;
+      -ms-transition: 0.2s ease-in-out top;
+       -o-transition: 0.2s ease-in-out top;
+          transition: 0.2s ease-in-out top;
+}
+
+.carousel.vertical .active {
+  top: 0;
+}
+
+.carousel.vertical .next {
+  top: 400px;
+}
+
+.carousel.vertical .prev {
+  top: -400px;
+}
+
+.carousel.vertical .next.left,
+.carousel.vertical .prev.right {
+  top: 0;
+}
+
+.carousel.vertical .active.left {
+  top: -400px;
+}
+
+.carousel.vertical .active.right {
+  top: 400px;
+}
+
+.carousel.vertical .item {
+    left: 0;
+}
+
+.active-list{
+  position: absolute;
+    top: 60px;
+    right: 15px;
+    left: 0;
+    height: 62px;
+    z-index: 1;
+    border: 10px solid #ddd;
+}
+
+
