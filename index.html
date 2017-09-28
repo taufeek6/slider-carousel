@@ -83,7 +83,12 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/custom.js"></script>
-    
+    <script>
+		$('#myCarousel').on('slide.bs.carousel', function () {
+			$("ul.list-group").find('li').css('color', 'grey');
+			$(".active-list").next('li').css('color', 'black');
+		})
+	</script>
 </body>
 
 </html>
